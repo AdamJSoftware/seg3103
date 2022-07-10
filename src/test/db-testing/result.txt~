@@ -1,0 +1,450 @@
+CRUD OPERATIONS :
+
+C : Create - When user 'Save' any new transaction, 'Create' operation is
+performed.
+
+R : Retrieve - When user 'Search' or 'View' any saved transaction, 'Retrieve'
+operation is performed.
+
+U : Update - When user 'Edit' or 'Modify' an existing record, the 'Update'
+operation of DB is performed.
+
+D : Delete - When a user 'Remove' any record from the system, 'Delete'
+operation of DB is performed.
+
+Results from C : 
+
+	main> INSERT INTO `persons` (`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("amethystliu1536@gmail.com","816300001111","female","Amethyst.liu","Araucanía"),
+		("amerygao@qq.com","816300007984","female","Amery.gao","Biobío"),
+		("hallazhang5718@baidu.com","816300006776","male","Halla.zhang","Metropolitana
+	de Santiago"),
+		("lysandragao9433@hotmail.com","816300007174","male","Lysandra.gao","Los
+	Ríos"),
+		("elvisgao6547@gmail.com","816300006865","male","Elvis.gao","Magallanes
+	y Antártica Chilena"),
+		("kaizhu6246@hotmail.com","816300007243","female","Kai.zhu","Tarapacá"),
+		("raymondzhu5996@qq.com","816300003382","female","Raymond.zhu","O'Higgins"),
+		("kellygu@gmail.com","816300004443","male","Kelly.gu","Aisén"),
+		("amylei@baidu.com","816300009961","male","Amy.lei","Los Lagos"),
+		("gilgu@baidu.com","816300004580","female","Gil.gu","Los Lagos")
+	[2022-07-10 10:42:45] 10 rows affected in 22 ms
+
+	main> INSERT INTO `persons` (`time`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-01-13
+	03:36:37","gavinli@qq.com","816300008686","female","Gavin.li","Los Lagos"),
+		("2021-11-04
+	15:37:03","tylergu8396@hotmail.com","816300002997","female","Tyler.gu","Los
+	Ríos"),
+		("2021-09-02
+	10:20:37","jenniferxu6423@gmail.com","816300002282","female","Jennifer.xu","Tarapacá"),
+		("2023-06-10
+	19:28:50","penelopeli9065@hotmail.com","816300002496","male","Penelope.li","Arica
+	y Parinacota"),
+		("2022-10-30
+	19:23:48","simonxu@gmail.com","816300004234","male","Simon.xu","Biobío"),
+		("2021-12-11
+	02:28:02","galvinli6231@baidu.com","816300004715","female","Galvin.li","Tarapacá"),
+		("2022-03-04
+	21:54:43","kennedygao9354@gmail.com","816300006457","male","Kennedy.gao","Biobío"),
+		("2021-11-27
+	21:31:03","cynthialai@gmail.com","816300004105","male","Cynthia.lai","Metropolitana
+	de Santiago"),
+		("2022-01-30
+	14:52:20","ralphliu8383@gmail.com","816300000714","male","Ralph.liu","Atacama"),
+		("2023-04-29
+	08:18:48","aladdinxu5610@qq.com","816300004183","male","Aladdin.xu","Aisén")
+	[2022-07-10 10:44:58] [1] [SQLITE_ERROR] SQL error or missing database (table
+	persons has no column named time)
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-09-29
+	11:28:28","wanggao@gmail.com","816300004588","female","Wang.gao","Maule"),
+		("2022-01-23
+	18:02:28","ivanalei7720@baidu.com","816300002777","female","Ivana.lei","Tarapacá"),
+		("2022-02-20
+	07:24:08","rosegao4025@baidu.com","816300004025","female","Rose.gao","Arica y
+	Parinacota"),
+		("2023-04-13
+	04:47:40","ezragao7969@hotmail.com","816300005737","male","Ezra.gao","Araucanía"),
+		("2021-07-27
+	15:57:59","moanalai1446@qq.com","816300000415","female","Moana.lai","Aisén"),
+		("2021-10-30
+	08:39:46","hopezhang2722@hotmail.com","816300002743","female","Hope.zhang","Tarapacá"),
+		("2022-05-18
+	13:30:58","odysseusli@baidu.com","816300006775","male","Odysseus.li","Arica y
+	Parinacota"),
+		("2022-06-30
+	19:23:24","coloradogu@gmail.com","816300007684","female","Colorado.gu","Magallanes
+	y Antártica Chilena"),
+		("2022-07-01
+	22:59:18","laithzhang@baidu.com","816300002573","male","Laith.zhang","Magallanes
+	y Antártica Chilena"),
+		("2021-11-10
+	08:22:13","vielkaliu1662@qq.com","816300004553","female","Vielka.liu","Tarapacá")
+	[2022-07-10 10:45:31] 10 rows affected in 8 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-10-25
+	04:07:46","camillaliu29@baidu.com","816300006518","female","Camilla.liu","Los
+	Ríos"),
+		("2022-06-26
+	00:48:27","carlwu625@baidu.com","816300003440","female","Carl.wu","Valparaíso"),
+		("2023-01-01
+	05:47:38","joelxu@gmail.com","816300007056","female","Joel.xu","Valparaíso"),
+		("2023-06-08
+	22:42:56","carsonli3407@baidu.com","816300003716","male","Carson.li","Coquimbo"),
+		("2022-04-01
+	00:28:32","jessamineliu@gmail.com","816300004971","male","Jessamine.liu","O'Higgins"),
+		("2022-06-01
+	07:19:41","kristenlai@hotmail.com","816300009875","male","Kristen.lai","Coquimbo"),
+		("2021-11-10
+	13:37:44","hallalai@gmail.com","816300004635","male","Halla.lai","Atacama"),
+		("2022-01-25
+	14:17:09","arethali@hotmail.com","816300007299","male","Aretha.li","Magallanes
+	y Antártica Chilena"),
+		("2021-09-21
+	15:17:54","myleslai9911@qq.com","816300008371","male","Myles.lai","Tarapacá"),
+		("2023-03-28
+	04:54:53","elmogu4090@hotmail.com","816300007375","male","Elmo.gu","Magallanes
+	y Antártica Chilena")
+	[2022-07-10 10:45:31] 10 rows affected in 5 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-10-05
+	08:42:44","sandrazhu@gmail.com","816300005555","male","Sandra.zhu","Metropolitana
+	de Santiago"),
+		("2022-09-16
+	23:29:35","teeganzhang@gmail.com","816300004217","female","Teegan.zhang","Maule"),
+		("2021-10-24
+	03:32:21","ronanwu@qq.com","816300008824","female","Ronan.wu","Valparaíso"),
+		("2022-06-19
+	14:36:35","ambergu@hotmail.com","816300006423","male","Amber.gu","Arica y
+	Parinacota"),
+		("2023-01-14
+	18:56:52","rhonagao592@qq.com","816300002218","female","Rhona.gao","Atacama"),
+		("2023-01-28
+	21:12:16","julianlai@hotmail.com","816300005241","female","Julian.lai","Tarapacá"),
+		("2022-12-24
+	20:40:55","colleenli2686@qq.com","816300005258","male","Colleen.li","Tarapacá"),
+		("2021-12-31
+	09:27:42","alfredaxu@qq.com","816300001738","male","Alfreda.xu","Maule"),
+		("2023-04-19
+	06:42:13","josephlai7198@qq.com","816300003779","female","Joseph.lai","Tarapacá"),
+		("2022-06-17
+	06:41:12","juliezhang5181@hotmail.com","816300008328","male","Julie.zhang","Tarapacá")
+	[2022-07-10 10:45:31] 10 rows affected in 5 ms
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2021-10-13
+	05:59:07","chavawu@baidu.com","816300005146","female","Chava.wu","Maule"),
+		("2022-03-26
+	05:44:53","knoxzhang@hotmail.com","816300007601","female","Knox.zhang","Tarapacá"),
+		("2023-04-19
+	08:03:49","fritzxu4222@baidu.com","816300005394","female","Fritz.xu","Atacama"),
+		("2023-06-07
+	19:08:27","edwardgu9283@gmail.com","816300009379","male","Edward.gu","Aisén"),
+		("2022-09-09
+	10:14:01","chaneyxu4461@gmail.com","816300008882","male","Chaney.xu","Magallanes
+	y Antártica Chilena"),
+		("2023-04-20
+	05:04:42","brendanzhu@baidu.com","816300007100","male","Brendan.zhu","Metropolitana
+	de Santiago"),
+		("2021-07-26
+	16:37:43","brennanzhang@gmail.com","816300002858","female","Brennan.zhang","Maule"),
+		("2021-09-08
+	00:51:57","tylergao@qq.com","816300007109","male","Tyler.gao","Valparaíso"),
+		("2022-03-21
+	08:24:58","chaneygu7224@hotmail.com","816300001638","female","Chaney.gu","Los
+	Lagos"),
+		("2021-08-08
+	04:29:36","corazhang@qq.com","816300001262","female","Cora.zhang","Metropolitana
+	de Santiago")
+	[2022-07-10 10:45:31] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2023-03-30
+	04:14:06","sebastianzhu8798@baidu.com","816300000413","female","Sebastian.zhu","Valparaíso"),
+		("2022-08-24
+	16:09:45","michelleliu2015@qq.com","816300002164","male","Michelle.liu","Valparaíso"),
+		("2023-04-20
+	01:02:00","lesliegao@baidu.com","816300008837","female","Leslie.gao","Aisén"),
+		("2023-03-15
+	10:34:16","adrianwu1824@baidu.com","816300002154","male","Adrian.wu","Arica y
+	Parinacota"),
+		("2022-06-20
+	03:10:54","avyegao@baidu.com","816300001841","male","Avye.gao","Valparaíso"),
+		("2022-03-15
+	12:28:20","carolyngao@hotmail.com","816300004877","female","Carolyn.gao","Araucanía"),
+		("2023-02-07
+	21:08:07","emeryxu1121@baidu.com","816300005876","female","Emery.xu","Aisén"),
+		("2022-03-02
+	08:21:45","kaitlinli3324@gmail.com","816300006028","female","Kaitlin.li","Biobío"),
+		("2021-12-11
+	13:16:34","ainsleylei7839@baidu.com","816300006955","male","Ainsley.lei","Valparaíso"),
+		("2022-05-11
+	16:46:30","tanishalai7084@baidu.com","816300005252","female","Tanisha.lai","Atacama")
+	[2022-07-10 10:45:31] 10 rows affected in 7 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2021-10-01
+	03:34:28","wandalai9896@hotmail.com","816300002637","female","Wanda.lai","Huádong"),
+		("2022-07-03
+	20:53:49","irenelei368@qq.com","816300007610","male","Irene.lei","Zhongnán"),
+		("2021-08-01
+	20:43:46","xylagao6430@gmail.com","816300003678","male","Xyla.gao","Xinán"),
+		("2023-01-07
+	19:46:21","noahliu@gmail.com","816300005335","female","Noah.liu","Zhongnán"),
+		("2022-08-24
+	09:01:17","dorothylei@baidu.com","816300000257","female","Dorothy.lei","Huádong"),
+		("2022-07-31
+	07:17:19","shealiu@hotmail.com","816300003613","female","Shea.liu","Xinán"),
+		("2022-06-03
+	20:36:49","declanlei@qq.com","816300006182","male","Declan.lei","Huábei"),
+		("2022-11-08
+	12:21:31","josephliu@baidu.com","816300001713","male","Joseph.liu","Xibei"),
+		("2021-10-02
+	20:20:22","olympiazhang6301@hotmail.com","816300002068","female","Olympia.zhang","Xinán"),
+		("2021-08-21
+	20:34:56","charissagu@baidu.com","816300000364","male","Charissa.gu","Huádong")
+	[2022-07-10 10:52:06] 10 rows affected in 7 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-09-30
+	17:20:57","luciuswu1099@baidu.com","816300009242","male","Lucius.wu","Xinán"),
+		("2021-10-25
+	21:06:16","lancezhang2555@baidu.com","816300005214","male","Lance.zhang","Huábei"),
+		("2022-06-11
+	04:59:08","kamalzhang@baidu.com","816300007532","female","Kamal.zhang","Dongbei"),
+		("2021-12-10
+	22:20:25","reginali5778@gmail.com","816300005836","female","Regina.li","Dongbei"),
+		("2022-05-15
+	00:07:47","omargao@baidu.com","816300002700","male","Omar.gao","Xibei"),
+		("2022-11-09
+	08:44:39","cleowu2112@hotmail.com","816300009375","male","Cleo.wu","Xibei"),
+		("2022-09-11
+	01:10:42","raphaelzhu1166@gmail.com","816300001814","female","Raphael.zhu","Huádong"),
+		("2022-05-11
+	20:33:29","zenaidalai@qq.com","816300000150","female","Zenaida.lai","Huádong"),
+		("2022-03-31
+	09:07:49","jenaliu2727@gmail.com","816300008891","male","Jena.liu","Xibei"),
+		("2023-07-01
+	15:01:17","darazhu9496@qq.com","816300005389","male","Dara.zhu","Huádong")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-06-21
+	03:42:31","josephwu@gmail.com","816300004877","female","Joseph.wu","Xinán"),
+		("2022-05-03
+	19:25:08","ivanalai@baidu.com","816300000127","male","Ivana.lai","Huádong"),
+		("2021-08-15
+	07:09:46","evangu@hotmail.com","816300001622","male","Evan.gu","Dongbei"),
+		("2023-03-15
+	03:42:37","brennanzhu5239@hotmail.com","816300003858","female","Brennan.zhu","Zhongnán"),
+		("2022-12-21
+	12:14:42","zephaniawu1612@qq.com","816300006965","female","Zephania.wu","Zhongnán"),
+		("2022-05-04
+	20:43:56","dahliazhang8458@qq.com","816300008711","male","Dahlia.zhang","Dongbei"),
+		("2022-01-17
+	22:19:39","illianalei@gmail.com","816300005829","female","Illiana.lei","Huábei"),
+		("2022-10-19
+	18:32:25","christenxu@gmail.com","816300000745","male","Christen.xu","Huádong"),
+		("2023-02-21
+	07:51:45","xenosli@hotmail.com","816300009287","male","Xenos.li","Zhongnán"),
+		("2023-04-02
+	21:07:11","fletchergu4876@qq.com","816300001967","female","Fletcher.gu","Huádong")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2021-12-12
+	16:46:14","barrettlei3874@hotmail.com","816300008382","male","Barrett.lei","Huádong"),
+		("2021-07-12
+	22:27:27","zelenialai@qq.com","816300002826","male","Zelenia.lai","Huábei"),
+		("2022-12-27
+	11:10:45","kamekolai@gmail.com","816300005524","male","Kameko.lai","Xinán"),
+		("2023-03-31
+	22:06:06","robinzhang@gmail.com","816300006678","female","Robin.zhang","Xinán"),
+		("2023-02-03
+	06:55:58","williamlai9600@gmail.com","816300000545","female","William.lai","Xibei"),
+		("2021-10-11
+	08:15:05","samuelgu6728@hotmail.com","816300002231","male","Samuel.gu","Zhongnán"),
+		("2022-06-22
+	20:45:08","stellali4482@gmail.com","816300001225","male","Stella.li","Zhongnán"),
+		("2022-10-17
+	19:07:38","tyronewu@baidu.com","816300002838","male","Tyrone.wu","Huábei"),
+		("2023-07-07
+	17:51:04","shellielai@hotmail.com","816300006454","female","Shellie.lai","Huádong"),
+		("2022-02-19
+	20:34:04","palmerzhang9091@qq.com","816300000696","female","Palmer.zhang","Huádong")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2023-01-19
+	12:46:16","akeemliu@gmail.com","816300003327","female","Akeem.liu","Xibei"),
+		("2022-01-10
+	11:01:57","roannali@gmail.com","816300002548","female","Roanna.li","Xibei"),
+		("2023-06-02
+	14:58:44","stellali@qq.com","816300004472","female","Stella.li","Huábei"),
+		("2023-04-18
+	05:04:22","wadelai@baidu.com","816300008343","male","Wade.lai","Zhongnán"),
+		("2022-06-06
+	14:37:56","amitygao7413@baidu.com","816300003288","female","Amity.gao","Zhongnán"),
+		("2021-12-23
+	04:22:44","maryamlai@gmail.com","816300002584","male","Maryam.lai","Dongbei"),
+		("2021-07-14
+	11:39:04","merrittlai9481@baidu.com","816300008631","male","Merritt.lai","Huábei"),
+		("2021-08-22
+	16:33:59","georgeli@hotmail.com","816300004401","female","George.li","Huádong"),
+		("2021-09-12
+	03:24:59","olgali@baidu.com","816300008132","male","Olga.li","Dongbei"),
+		("2021-11-30
+	11:44:51","camillelai7930@hotmail.com","816300004964","male","Camille.lai","Zhongnán")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2021-09-13
+	11:11:30","yokoxu@hotmail.com","816300003352","female","Yoko.xu","Dongbei"),
+		("2021-08-11
+	19:56:34","nicholeliu@baidu.com","816300002074","female","Nichole.liu","Xinán"),
+		("2023-05-24
+	01:57:08","joshuazhu@gmail.com","816300001758","male","Joshua.zhu","Zhongnán"),
+		("2021-09-05
+	14:12:02","haleylai@qq.com","816300001637","female","Haley.lai","Huádong"),
+		("2022-01-26
+	00:05:49","roganlai@baidu.com","816300005127","male","Rogan.lai","Dongbei"),
+		("2023-05-29
+	11:53:33","levizhu@baidu.com","816300009474","female","Levi.zhu","Huábei"),
+		("2021-09-25
+	21:27:44","ronanxu@qq.com","816300004241","female","Ronan.xu","Huábei"),
+		("2022-06-11
+	15:27:56","arseniogu@hotmail.com","816300003584","male","Arsenio.gu","Huábei"),
+		("2021-10-03
+	01:16:56","briarliu5036@hotmail.com","816300002716","female","Briar.liu","Xinán"),
+		("2023-04-18
+	07:34:08","ottozhang3227@qq.com","816300002177","female","Otto.zhang","Dongbei")
+	[2022-07-10 10:52:06] 10 rows affected in 5 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-10-28
+	11:37:50","hannalei@hotmail.com","816300000562","female","Hanna.lei","Huádong"),
+		("2022-07-14
+	16:10:26","evelynlei@gmail.com","816300002578","male","Evelyn.lei","Huábei"),
+		("2021-12-27
+	00:49:01","myraxu3948@qq.com","816300008653","female","Myra.xu","Zhongnán"),
+		("2022-03-25
+	10:14:11","ferdinandwu@gmail.com","816300002032","male","Ferdinand.wu","Huádong"),
+		("2022-04-14
+	10:33:38","jeremywu3465@baidu.com","816300008354","male","Jeremy.wu","Zhongnán"),
+		("2023-01-05
+	09:51:42","bradleyzhang3598@gmail.com","816300006812","male","Bradley.zhang","Xibei"),
+		("2023-01-05
+	20:23:12","noahli@hotmail.com","816300005476","female","Noah.li","Huábei"),
+		("2021-12-04
+	03:25:14","kareemliu1320@hotmail.com","816300004582","female","Kareem.liu","Dongbei"),
+		("2022-08-05
+	17:20:58","hedwigliu@gmail.com","816300007646","female","Hedwig.liu","Zhongnán"),
+		("2023-01-03
+	11:20:59","dominiquegao@hotmail.com","816300007857","male","Dominique.gao","Huábei")
+	[2022-07-10 10:52:06] 10 rows affected in 5 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2021-08-06
+	23:49:03","kermitwu@baidu.com","816300008257","female","Kermit.wu","Xinán"),
+		("2021-07-15
+	18:50:33","chardezhu@qq.com","816300001246","female","Charde.zhu","Huádong"),
+		("2022-01-15
+	04:59:57","autumnzhu@qq.com","816300000774","female","Autumn.zhu","Huábei"),
+		("2022-02-13
+	11:31:31","mohammadliu9782@qq.com","816300003512","female","Mohammad.liu","Xibei"),
+		("2023-01-07
+	02:53:19","kenyonzhang3072@hotmail.com","816300008901","male","Kenyon.zhang","Dongbei"),
+		("2022-12-16
+	06:13:11","gabrielgao594@qq.com","816300008756","male","Gabriel.gao","Huábei"),
+		("2021-07-24
+	02:22:28","avalai9653@baidu.com","816300002337","female","Ava.lai","Dongbei"),
+		("2021-12-04
+	03:19:01","kevynli1151@gmail.com","816300004611","male","Kevyn.li","Huábei"),
+		("2022-07-30
+	01:19:43","paulaxu@baidu.com","816300003273","male","Paula.xu","Zhongnán"),
+		("2023-05-03
+	05:32:36","ayannagu@qq.com","816300000612","female","Ayanna.gu","Zhongnán")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2021-11-04
+	14:52:51","justinegu5904@hotmail.com","816300001075","female","Justine.gu","Xinán"),
+		("2022-07-01
+	04:49:37","odettewu1662@qq.com","816300003128","female","Odette.wu","Dongbei"),
+		("2022-11-07
+	19:48:45","leilaliu@qq.com","816300003262","female","Leila.liu","Zhongnán"),
+		("2022-03-09
+	04:52:36","knoxgu@qq.com","816300009514","female","Knox.gu","Xinán"),
+		("2023-03-29
+	11:37:48","noahwu@hotmail.com","816300008174","female","Noah.wu","Zhongnán"),
+		("2021-12-25
+	17:21:07","perryli@gmail.com","816300002417","female","Perry.li","Huádong"),
+		("2021-08-05
+	21:40:06","grantlei@baidu.com","816300008384","male","Grant.lei","Zhongnán"),
+		("2023-06-08
+	00:10:08","merrillgao6331@qq.com","816300004828","female","Merrill.gao","Xibei"),
+		("2022-06-19
+	10:47:51","ellaxu4724@hotmail.com","816300001974","female","Ella.xu","Zhongnán"),
+		("2023-05-10
+	21:38:56","jolieli@baidu.com","816300006896","female","Jolie.li","Huábei")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+	main> INSERT INTO `persons`
+	(`create_datetime`,`email`,`phone`,`sex`,`username`,`zone`)
+	      VALUES
+		("2022-08-11
+	13:30:13","patricklei7717@qq.com","816300001637","male","Patrick.lei","Xibei"),
+		("2022-04-17
+	04:49:19","indialai6131@baidu.com","816300005516","female","India.lai","Huádong"),
+		("2023-06-20
+	10:27:13","rigelzhu@gmail.com","816300006814","male","Rigel.zhu","Huádong"),
+		("2021-10-14
+	06:01:14","bethanylai@hotmail.com","816300005737","male","Bethany.lai","Xibei"),
+		("2022-04-15
+	15:42:58","amandalai@hotmail.com","816300003068","female","Amanda.lai","Dongbei"),
+		("2023-04-28
+	04:53:04","cameronlei@baidu.com","816300008287","female","Cameron.lei","Zhongnán"),
+		("2022-08-23
+	04:32:53","rashadliu@baidu.com","816300001005","female","Rashad.liu","Xibei"),
+		("2021-08-09
+	23:45:59","solomonxu@baidu.com","816300003535","male","Solomon.xu","Xibei"),
+		("2022-12-07
+	10:03:46","doralai3102@qq.com","816300002344","male","Dora.lai","Huábei"),
+		("2022-07-02
+	09:43:27","echolai@hotmail.com","816300008407","female","Echo.lai","Xibei")
+	[2022-07-10 10:52:06] 10 rows affected in 6 ms
+
+SUCCESS CREATE OPERATION
