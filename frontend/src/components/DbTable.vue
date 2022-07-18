@@ -62,6 +62,7 @@
 <script>
     import Bus from '../eventBus'
     import DbModal from './DbModal.vue'
+    import _ from 'lodash'
 
     export default {
         data(){
@@ -101,14 +102,14 @@
             getCustomers: function () {
                 this.$axios.get(this.apiUrl, {
                     params: {
-                        page: this.currentPage,
                         sex: this.sex,
                         email: this.email
                     }
                 }).then((response) => {
-                    this.tableData = response.data.data.results;
+                  console.log(this.currentPage)
+                    this.tableData = _.take(_.drop(response.data.data.results, (this.currentPage- 1)*10), 10);
                     this.total = response.data.data.total;
-                    this.pageSize = response.data.data.count;
+                    this.pageSize = 10;
                     console.log(response.data.data);
                 }).catch(function (response) {
                     console.log(response)

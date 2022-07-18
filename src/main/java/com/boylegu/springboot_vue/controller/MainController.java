@@ -108,6 +108,8 @@ public class MainController {
 
         }
 
+        System.out.println("PAGE: " + pages);
+
 //        List<String> properties = new ArrayList<>();
 //        properties.add("id");
 //

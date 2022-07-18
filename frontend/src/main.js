@@ -21,6 +21,7 @@ import App from './App.vue'
 import 'element-ui/lib/theme-default/index.css'
 import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
+import router from './router/index.js';
 
 // more grace import third package !
 import moment from 'moment'
@@ -43,7 +44,7 @@ Vue.use(FormItem);
 Vue.use(Input);
 Vue.use(Dialog);
 Vue.use(Option);
-
+Vue.use(router);
 locale.use(lang);
 
 

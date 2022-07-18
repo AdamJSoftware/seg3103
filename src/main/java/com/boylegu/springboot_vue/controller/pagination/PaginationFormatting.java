@@ -236,6 +236,8 @@ public class PaginationFormatting {
 
         this.multiValue.setPage(typeInstance.getPageNumber() + 1);
 
+        System.out.println("TYPE INSTANCE: "+ typeInstance.query().toString() );
+
         this.multiValue.setResults(typeInstance.getContent());
 
         this.multiValue.setTotal(typeInstance.getTotal());
