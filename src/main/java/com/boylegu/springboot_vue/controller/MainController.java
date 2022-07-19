@@ -119,6 +119,10 @@ public class MainController {
 
         PaginationFormatting paginInstance = new PaginationFormatting();
 
+        if(this.maxPerPage == null){
+            this.maxPerPage = 10;
+        }
+
         return paginInstance.filterQuery(sex, email,  PageRequest.of(pages - 1, maxPerPage, Sort.by(Direction.ASC, "id")));
     }
 
@@ -143,6 +147,8 @@ public class MainController {
         *    @apiSuccess {String} zone
         */
 
+
+        System.out.println(id);
         Persons user = personsRepository.findById(id).get();
 
         return new ResponseEntity<>(user, HttpStatus.OK);
